@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trail Dodger</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="game-header">
+        <div>
+          <h1>Trail Dodger</h1>
+          <p>Move with arrow keys or WASD. Avoid the falling blocks.</p>
+        </div>
+        <div class="hud">
+          <div class="hud-item">
+            <span class="hud-label">Score</span>
+            <span id="score" class="hud-value">0</span>
+          </div>
+          <div class="hud-item">
+            <span class="hud-label">Best</span>
+            <span id="best-score" class="hud-value">0</span>
+          </div>
+        </div>
+      </header>
+      <section class="game-area">
+        <canvas id="game" width="720" height="420"></canvas>
+        <div id="overlay" class="overlay hidden">
+          <div class="overlay-card">
+            <h2 id="overlay-title">Paused</h2>
+            <p id="overlay-text">Press Space to resume.</p>
+            <button id="start-button" class="primary">Start Run</button>
+          </div>
+        </div>
+      </section>
+      <footer class="game-footer">
+        <button id="pause-button" class="ghost">Pause</button>
+        <button id="restart-button" class="ghost">Restart</button>
+        <p class="hint">Tip: The longer you survive, the faster the trail drops.</p>
+      </footer>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
